@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Showroom</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .filter-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .car-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .car-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .car-card:hover {
+      transform: scale(1.03);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .car-info {
+      padding: 15px;
+    }
+
+    .car-info h3 {
+      margin: 0 0 10px;
+    }
+
+    .price {
+      color: #009688;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Car Showroom</h1>
+
+  <div class="filter-box">
+    <label for="brandFilter">Filter by Brand:</label>
+    <select id="brandFilter" onchange="filterCars()">
+      <option value="all">All</option>
+      <option value="Toyota">Toyota</option>
+      <option value="Honda">Honda</option>
+      <option value="Ford">Ford</option>
+    </select>
+  </div>
+
+  <div class="car-container" id="carList">
+    <div class="car-card" data-brand="Toyota">
+      <img src="https://via.placeholder.com/300x180?text=Toyota+Camry" alt="Toyota Camry">
+      <div class="car-info">
+        <h3>Toyota Camry</h3>
+        <p class="price">$24,000</p>
+      </div>
+    </div>
+
+    <div class="car-card" data-brand="Honda">
+      <img src="https://via.placeholder.com/300x180?text=Honda+Civic" alt="Honda Civic">
+      <div class="car-info">
+        <h3>Honda Civic</h3>
+        <p class="price">$22,500</p>
+      </div>
+    </div>
+
+    <div class="car-card" data-brand="Ford">
+      <img src="https://via.
